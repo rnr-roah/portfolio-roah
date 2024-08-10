@@ -3,12 +3,23 @@ body {
     font-family: Arial, sans-serif;
     background-color: #1e1e1e;
     color: #ffffff;
+    background-image: url('background.png'); /* Replace with the path to your image */
+    background-size: cover;   /* Ensures the image covers the entire page */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Keeps the image fixed in place while scrolling */
+    background-position: center center; /* Centers the image on the page */
+    
+    
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    display: inline-block;
+    font-family: "arial";
+    font-size: 24px;
+    
 }
 .header {
     display: flex;          /* Aligns logo and nav horizontally */
@@ -16,7 +27,6 @@ body {
     align-items: center;    /* Vertically centers logo and nav */
     border-bottom: 1px solid #444;
     padding-bottom: 10px;
-    position: sticky;
 }
 
 .header {
@@ -26,8 +36,9 @@ body {
     margin: 5px;
     width: 95%;
     z-index: 1000;
-    background-color: ~#333; /* Optional: change color as needed */
+    background-color: rgba(0, 0, 0, 0.2); /* Optional: change color as needed */
     padding: 10px 20px; /* Optional: adjust padding */
+    padding-top: 0px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: add shadow */
 }
 
@@ -64,19 +75,26 @@ body {
     .menu-toggle {
         display: block;
     }
-
+    /* Make the 3-dot menu visible when scrolling down */
+    .menu-toggle.visible {
+        display: block;
+    }
     /* Hide the projects section by default on mobile */
     .projects-section {
+        display: none;
+    }
+    /* When projects-section is hidden, show the 3-dot menu */
+    .projects-section.hidden {
         display: none;
     }
 
     /* Show projects when menu is toggled */
     .projects-section.open {
         display: block;
-        position: absolute;
-        padding-left:35%;
-        padding-right:35%;
-        padding-top: 10%;
+        position: fixed;
+        padding-left:25%;
+        padding-right:25%;
+        padding-top: 0%;
         padding-bottom: 10%;
         background-color: rgba(30, 30, 30, 1)
                   
@@ -110,34 +128,41 @@ body {
 .main-content {
     display: flex;
     justify-content: space-between;
-    margin-top: 15%;
+    margin-top: 100px;
 }
-.profile{
-  margin:10px;
-  position: fixed;
-}
-.profile img{
-    border-radius: 15%;
-    width: 300px;
-}
+
 .welcome-section{
    margin:5px;
    position: relative;
+   margin-bottom: 30%;
 }
 .welcome-section h1 {
     font-size: 60px;
-    margin-bottom: 30%;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    animation: typing;
+    border-right: 1px solid;
+    animation-duration: 1.5s;
+    animation-timing-function: steps(30, end);
+    animation-fill-mode: forwards;
 }
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
 
 .welcome-section p {
     font-size: 18px;
-    line-height: 1.6;
+    line-height: 0;
 }
 
 .projects-section{
-  background-color: rgba(0, 0, 0, 0.0);
+  background-color: rgba(0, 0, 0, 0.5);
   padding: 5px;
-  corner-radius: 20px;
+  margin: 0px;
+  border-radius: 25px;
+  margin-left: 10%;
 }
 .projects-section h2 {
     font-size: 24px;
@@ -157,6 +182,29 @@ body {
     text-decoration: none;
     color: #ffcc00;
     font-size: 18px;
+}
+
+.information {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+.profile{
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+.about-section {
+    line-height: 1.6;
+    padding-left: 25%;
+    padding-right: 25%;
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 25px;
+    border-top: 1px solid #444;
+    border-bottom: 1px solid #444;
+    border-right: 1px solid #444;
+    border-left: 1px solid #444;
+    border-color: black;
 }
 
 .footer {
