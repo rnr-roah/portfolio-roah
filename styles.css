@@ -1,215 +1,232 @@
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #1e1e1e;
-    color: #ffffff;
-    background-image: url('background.png'); /* Replace with the path to your image */
-    background-size: cover;   /* Ensures the image covers the entire page */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    background-attachment: fixed; /* Keeps the image fixed in place while scrolling */
-    background-position: center center; /* Centers the image on the page */
-    
-    
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: url("logo.png");
+    background-size: cover;        /* makes the image cover the entire div */
+    background-position: center;   /* centers the image */
+    background-attachment: fixed;
+    background-repeat: no-repeat;  /* prevents tiling */
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    display: inline-block;
-    font-family: "arial";
-    font-size: 24px;
-    
-}
-.header {
-    display: flex;          /* Aligns logo and nav horizontally */
-    justify-content: space-between;  /* Positions nav and logo on opposite ends */
-    align-items: center;    /* Vertically centers logo and nav */
-    border-bottom: 1px solid #444;
-    padding-bottom: 10px;
-}
-
-.header {
-    position: fixed;
-    top: 0;
-    left: 0px;
-    margin: 5px;
-    width: 95%;
-    z-index: 1000;
-    background-color: rgba(0, 0, 0, 0.2); /* Optional: change color as needed */
-    padding: 10px 20px; /* Optional: adjust padding */
-    padding-top: 0px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: add shadow */
-}
-
-.welcome-section {
-    position: relative; /* Ensure the 3-dot button is positioned relative to this section */
-    padding: 10px;
-}
-
-/* Initially hide the 3-dot menu button */
-.menu-toggle {
-    display: none; /* Initially hidden, shown via media query */
+.profile-card {
     position: relative;
-    right: 10px;
-    left: 10px;
-    
-    font-size: 24px;
-    background-color: rgba(0, 0, 0, 0.1); /* Semi-transparent black background */
-    color: #ffffff;
-    border: none;
-    padding: 10px;
-    border-radius: 8px; /* Rounded corners */
-    cursor: pointer;
-    z-index: 1000; /* Ensure it hovers above other content */
-}
-
-/* Media query for mobile devices */
-@media (max-width: 768px) {
-    /* Hide navigation links on mobile */
-    .nav a {
-        display: all;
-    }
-
-    /* Show the 3-dot menu button on mobile */
-    .menu-toggle {
-        display: block;
-    }
-    /* Make the 3-dot menu visible when scrolling down */
-    .menu-toggle.visible {
-        display: block;
-    }
-    /* Hide the projects section by default on mobile */
-    .projects-section {
-        display: none;
-    }
-    /* When projects-section is hidden, show the 3-dot menu */
-    .projects-section.hidden {
-        display: none;
-    }
-
-    /* Show projects when menu is toggled */
-    .projects-section.open {
-        display: block;
-        position: fixed;
-        padding-left:25%;
-        padding-right:25%;
-        padding-top: 0%;
-        padding-bottom: 10%;
-        background-color: rgba(30, 30, 30, 1)
-                  
-    }
-}
-
-.logo img {
-    height: 40px;  /* Adjust size as needed */
-    width: auto;   /* Maintain aspect ratio */
-    border-radius:50%;
-    display: inline-block;  /* Ensure the logo is inline */
-    vertical-align: middle; /* Vertically align it with the nav */
-}
-
-.nav {
-    display: flex;  /* Aligns children horizontally */
-    align-items: center; /* Vertically centers the items */
-}
-
-.nav a {
-    margin-left: 20px;  /* Space between each icon */
-}
-
-.nav img {
-    height: 24px;  /* Adjust size according to design */
-    width: auto;   /* Keep aspect ratio intact */
-    display: inline-block;  /* Ensure SVGs are inline elements */
-    vertical-align: middle; /* Vertically center the SVGs */
-}
-
-.main-content {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 100px;
-}
-
-.welcome-section{
-   margin:5px;
-   position: relative;
-   margin-bottom: 30%;
-}
-.welcome-section h1 {
-    font-size: 60px;
-    overflow: hidden;
-    white-space: nowrap;
-    width: 0;
-    animation: typing;
-    border-right: 1px solid;
-    animation-duration: 1.5s;
-    animation-timing-function: steps(30, end);
-    animation-fill-mode: forwards;
-}
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-  }
-
-.welcome-section p {
-    font-size: 18px;
-    line-height: 0;
-}
-
-.projects-section{
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 5px;
-  margin: 0px;
-  border-radius: 25px;
-  margin-left: 10%;
-}
-.projects-section h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.projects-section ul {
-    list-style-type: none;
-    padding: 0;   
-}
-
-.projects-section ul li {
-    margin-bottom: 10px;
-}
-
-.projects-section ul li a {
-    text-decoration: none;
-    color: #ffcc00;
-    font-size: 18px;
-}
-
-.information {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 15px;
-}
-.profile{
-    padding: 10px;
-    display: flex;
-    justify-content: space-around;
-}
-.about-section {
-    line-height: 1.6;
-    padding-left: 25%;
-    padding-right: 25%;
-    background-color: rgba(0,0,0,0.2);
-    border-radius: 25px;
-    border-top: 1px solid #444;
-    border-bottom: 1px solid #444;
-    border-right: 1px solid #444;
-    border-left: 1px solid #444;
-    border-color: black;
-}
-
-.footer {
-    margin-top: 50px;
+    background-color: rgba(255, 255, 255, 0.919);
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #c0bdbd;
     text-align: center;
-    color: #888;
-    font-size: 14px;
+    width: 500px;
+}
+.avatar-container {
+	position: absolute;
+	top: -75px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 150px;
+	height: 150px;
+}
+
+.profile-img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+h1 {
+    margin: 60px 0 5px;
+    font-size: 1.5em;
+}
+
+h6 {
+    color: #777;
+    font-size: 1em;
+    margin: 5px 0 15px;
+    padding-bottom: 5px;
+    /*border-bottom: 1px solid #d8d2d2;*/
+}
+
+p {
+    font-size: 0.9em;
+    color: #555;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #d8d2d2;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #d8d2d2;
+
+}
+
+.social-links img {
+    width: 30px;
+    padding-bottom: 10px;
+    margin: 0px 20px;
+}
+
+.blog-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #bcbfc2;
+    color: rgb(54, 52, 52);
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.blog-link:hover {
+    background-color: #677079;
+}
+
+
+
+/*profilecard */
+.profile-card {
+    perspective: 1000px;
+    margin: 0px 0px;
+}
+.profile-card:hover{
+    background-color: white;
+}
+.profile-card-inner {
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+.profile-card-back {
+    position: fixed;
+    backface-visibility: hidden;
+    border-radius: 0px;
+}
+
+.profile-card-back {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    margin-top: -154px;
+    transform: rotateY(180deg);
+}
+
+.swapped .profile-card-inner {
+    transform: rotateY(180deg);
+}
+
+/*
+.profile-card:hover .profile-card-inner {
+    transform: rotateY(360deg);
+}
+*/
+
+
+.nav-link {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #f8d5f5b4;
+    /*border: 1px solid #bcbfc2;*/
+    color: rgb(54, 52, 52);
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+/*    background-color: #de96ff;*/
+    background-color: #f8d5f5;
+}
+
+/*Flashcard 1*/
+.flashcard1 {
+    perspective: 1000px;
+    margin: 0px auto;
+}
+
+.flashcard1-inner {
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+.flashcard1-back {
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 5px;
+}
+
+.flashcard1-back {
+    background-color: rgba(0, 0, 0, 0.292);
+    backdrop-filter: blur();
+    border: 1px solid rgb(209, 209, 209);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    padding: 0px;
+    position: fixed;
+    margin-top: -400px;
+    margin-right: 500px;
+    transform: rotateY(180deg);
+    border-radius: 5px;
+}
+.row{
+    display: flex;
+}
+.tile {
+    background-color: #8260e97c;
+    background-image: url("user.svg");
+    background-size: auto;        /* makes the image cover the entire div */
+    background-position: center;   /* centers the image */
+    background-repeat: no-repeat;  /* prevents tiling */
+    border: 1px solid #c0bdbd;
+    border-radius: 5px;
+    margin: 40px;
+    padding: 25px;
+}
+
+.flipped .flashcard1-inner {
+    transform: rotateY(180deg);
+}
+/*
+.flashcard1:hover .flashcard1-inner {
+    transform: rotateY(180deg);
+}
+*/
+
+
+/* Mobile Optimization */
+@media (max-width: 600px) {
+    .flashcard1-back {
+        margin-top: -500px;
+        width: 100%;  /* Make navbar take full width */
+        height: 80vh;
+    }
+
+    .content-card,
+    .intro {
+        width: 90%;  /* Reduce width to fit mobile screens */
+        margin-left: auto;
+        margin-right: auto;
+    }
+    h1 {
+        font-size: 1.2em;  /* Reduce font size for mobile */
+    }
+
+    h6 {
+        font-size: 0.9em;
+    }
+
+    p {
+        font-size: 0.8em;
+    }
+
+    .web-link {
+        padding: 8px 12px;  /* Adjust padding for mobile */
+    }
 }

@@ -3,57 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rohit Shah Portfolio</title>
+    <title>Profile Page</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <div class="logo"><img src="logo.svg" alt="Logo"></div>
-            <nav class="nav">
-                <a href="#"><img src="email.svg"></a>
-                <a href="https://github.com/rnr-roah"><img src="github.svg"></a>
-                <a href="https://instagram.com/rnr.roah"><img src="insta.svg"></a>
-                <button class="menu-toggle" id="menu-toggle"> &#9776;</button>
-            </nav>
-        </header>   
-        <main class="main-content">
-            <section class="welcome-section">
-                <h1 class = "typed">Welcome.</h1>
-                <p>to my humble abode :)</p>
-            </section>
-            <section class="projects-section" id="projects-section">
-                <h2>Info</h2>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About me</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul><br>
-                 <h2>Projects</h2>
-                <ul>
-                    <li><a href="#">Dcomposer</a></li>
-                    <li><a href="#">Cookiemunch</a></li>
-                    <li><a href="#">Screen time converter</a></li>
-                    <li><a href="#">LED multi</a></li>
-                    <li><a href="#">inline.svg</a></li>
-                </ul>
-            </section>
-        </main> 
-        <section class="profile">
-            <img src="profile.jpeg" style="border-radius: 50%; max-width: 400px;">
-        </section>
-        <main class="information">
-           
-            <section class="about-section">
-                <p></p><p>My name is Rohit Shah, I'm a programming / linux enthusiast based in Birtamod,  Nepal. I have developed many types of front-ends from well known DJ applications to Ecommerce booking platforms.</p>
-                <p>I'm passionate about cutting-edge, pixel-perfect, beautiful interfaces and intuitively implemented UX.</p>
-            </section>
-        </main>
-        <footer class="footer">
-            <p>&copy;2022 rnrroah@gmail.com</p>
-        </footer>
+    <div class="profile-card">
+	    <div class = "avatar-container">
+        
+    
+        <div class="profile-card-inner">
+        <div class="profile-card-front">
+            <img src="avatar.jpeg" alt="Profile Picture" class="profile-img">
+        </div>
+        <div class="profile-card-back">
+            <img src="profile.jpeg" alt="Profile Picture" class="profile-img">  
+        </div>
+    </div> 
+
+	    </div>
+        <h1>Rohit Shah (Roah)</h1>
+        <h6>Computer Science student</h6>
+        <p>I am currently interning as a Software Development Engineer at a local software company(prefer not to disclose more), working on very exciting projects. Let's begin typing!</p>
+        <p><strong>Interests:</strong> Software Development, Machine Learning, Data Science, and Cybersec.</p>
+        <div class="social-links">
+            <a href="https://github.com/rnr-roah"><img src="github.svg" alt="GitHub"></a>
+            <a href="https://www.instagram.com/rnr.roah"><img src="insta.svg" alt="Instagram"></a>
+        </div>
+        <div class="flashcard1">
+            <div class="flashcard1-inner">
+                <div class="flashcard1-back">
+                
+                <div class="row">
+                    <div class="tile"><h1>____</h1>
+                        <a href="projects.html#aboutme" class="nav-link">About Me</a>
+                    </div>
+                    <div class="tile"><h1>____</h1>
+                        <a href="projects.html#projects" class="nav-link">Projects</a>
+                    </div>
+                </div>    
+                <div class="row">
+                    <div class="tile"><h1>____</h1>
+                        <a href="linux-blog.html" class="nav-link">Blog</a>
+                    </div>
+                    <div class="tile"><h1>____</h1>
+                        <a href="poetry-blog.html" class="nav-link">Blog</a>
+                    </div>
+                </div> 
+                </div>
+                <div class="flashcard1-front">
+                    <a href="#" class="blog-link">Know more</a>
+                </div>
+            </div>
+        </div>
     </div>
-<script src="scripts.js"></script>
+
+    <script src="flashcards.js"></script>
 
 </body>
 </html>
+
