@@ -13,6 +13,7 @@ body {
     background-position: center;   /* centers the image */
     background-attachment: fixed;
     background-repeat: no-repeat;  /* prevents tiling */
+    overflow: hidden;
 }
 
 .profile-card {
@@ -206,7 +207,7 @@ p:hover{
     width: 500px;
     padding: 0px;
     position: auto;
-    margin-top: -400px;
+    margin-top: -80%;
     margin-right: 500px;
     transform: rotateY(180deg);
     border-radius: 5px;

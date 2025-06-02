@@ -3,158 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects Page</title>
+    <title>Projects</title>
     <link rel="stylesheet" href="projects.css">
 </head>
-<body><div class="content">
-    <div class="navbar">
-        <div class="nav">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="#aboutme" class="nav-link" data-link="aboutme">About me</a>
-        <a href="#projects" class="nav-link" data-link="projects">Projects</a>
-        <!-- Blog Dropdown Start -->
-        <div class="dropdown">
-            <button class="nav-link">Blog ▾</button>
-            <div class="dropdown-content">
-                <a href="linux-blog.html" >Linux Blog</a>
-                <a href="poetry-blog.html">Poetry Blog</a>
+<body>
+    <div class="profile-card">
+	   <h1>Projects</h1>
+        <h6>Software Developer</h6>
+        <p>I'm 20, currently in the <strong>U.S.</strong> pursuing an undergraduate degree in Electrical Engineering. I'm originally from Nepal. This website is currently under renovation, so some pages might not work</p>
+        <p><strong>Interests:</strong> Software Development, Machine Learning, Data Science, and Cybersec.</p>
+        <div class="social-links">
+            <!-- <marquee direction="right" > -->
+            <a href="https://github.com/rnr-roah" id="links"><img src="github.svg" alt="GitHub"></a>
+            <a href="https://www.instagram.com/rnr.roah" id="links"><img src="insta.svg" alt="Instagram"></a>
+        <!-- </marquee> -->
+        </div>
+
+        <div class="flashcard1">
+            <div class="flashcard1-inner">
+                <div class="flashcard1-front">
+                    <a href="#" class="blog-link">Know more</a>
+                </div>
+                <div class="flashcard1-back">
+                    <a href="index.html" class="nav-link2">         
+                    <div class="tile">
+                        Home
+                    </div>
+                    </a>
+                    <a href="aboutme.html" class="nav-link2">
+                    <div class="tile">About me
+                    </div> </a> 
+                    <a href="blog.html" class="nav-link2">       
+                    <div class="tile">Blog
+                    </div></a>
+                    <div class="close">
+                        <a href="#" class="close-link">Exit</a>
+                    </div>
+                </div>                
             </div>
         </div>
-        <!-- Blog Dropdown End -->
-        </div>
-        <div class="logos">
-        <a href="https://github.com/rnr-roah"><img src="github.svg"></a>
-        <a href="https://instagram.com/rnr.roah"><img src="insta.svg"></a>
-        </div>
-    </div>
-    <!-- About Me Section Down here  -->
-    <div class="intro" id="aboutme">
-        <h1>About Me Section
-        </h1>
-    </div> 
-    <div class="content-card">
-        <h1>Introduction</h1><h6></h6>
-        <p style="font-weight: 600; font-size: 18px; width: 1000px; margin: 0 auto; text-align: justify; padding: 20px;">
-            Hey there! I’m Rohit Shah, a 20-year-old undergrad studying Electrical Engineering (Digital Track) in the U.S. Originally from Nepal, I’ve always been curious about how things work — especially when it comes to tech. While my major covers the hardware side of things, my main focus is on coding and software development.
-
-            I enjoy building projects that bring together logic, creativity, and real-world problem solving. Whether it’s diving into a new programming language, working on side projects, or exploring the intersection of hardware and software, I’m always looking to learn and level up.
-            
-            Currently, I'm exploring areas like embedded systems, web development, and a bit of AI. Let’s build something cool.</p>       
-    </div>
-    <div class="content-card">
-        <h1>Hobbies</h1><h6></h6>
-        <p style="font-weight: 600; font-size: 18px; width: 1000px; margin: 0 auto; text-align: justify; padding: 20px;">
-            Outside of academics and tech, I’m all about creative expression and personal growth. I love playing the guitar and singing — it’s one of my favorite ways to relax and connect with emotion. Writing poetry is another passion of mine, and I often find myself scribbling down thoughts or verses when inspiration strikes. You can check out some of my written pieces on my <a href="poetry-blog.html" style="color: #7f4c7d; text-decoration: none;"><i>poetry blog</i></a>.
-    
-            I’m also really into Linux and the open-source ecosystem. From exploring different distros to tweaking setups and running everything through the terminal, it’s become a big part of my workflow. In fact, most of my coding projects are Linux-based — I even write about some of my favorite tools and setups on my <a href="linux-blog.html" style="color: #7f4c7d; text-decoration: none;"><i>blog</i></a>.
-    
-            When I’m not in front of a screen, you’ll probably find me working out — it helps me stay sharp and grounded. Whether it’s music, writing, or hacking away at a terminal, I’m always chasing that sweet spot between creativity and curiosity.
-        </p>       
-    </div>
-    <!-- Projects Section Down here -->
-    <div class="intro" id="projects">
-        <h1>Projects Section
-        </h1>
-        <h6>Only select few projects are listed here as of now.<br>
-            you can check out all of my public projects in my github page.<br>
-            Web test 110
-        </h6>
-    </div> 
-    <div class="content-card">
-        <h1 id="roahos">Roah OS
-                <div class="screenshot-button" id="openViewer1">
-                    <img src="gallery.svg">
-                </div> 
-                <dialog id="imageViewerDialog1">
-                    <div class="image-viewer1">
-                        <button id="prev1" class="arrow">&lt;</button>
-                        <img id="image1" src="roahos/Screenshot_1.png" alt="Image Viewer1">
-                        <button id="next1" class="arrow">&gt;</button>
-                        <button id="closeViewer1" class="close-button">X</button>
-                    </div>
-                </dialog>               
-        </h1>
-        <h6>A distro script for Debian & Arch based linux systems.</h6>
-        <p>
-            In search of minimal & resource efficient desktop environment i stumbled upon tiling desktop managers and eventually fell in love with them. This distro (still in progress) brings my configurations that is set up in such a way that it offers seemless coding/programming session.
-            This is recommended for people who want clutterless programming experience and those who have old hardware and want something light for their systems.
-        </p>
-        <p><strong style="padding-right:100px;">For developers & linux  experts:</strong><a href="https://github.com/rnr-roah/awesome" class="web-link">Github</a></p>
-        <p><strong style="padding-right:100px;">For Newbies & normal people:</strong><a href="https://github.com/rnr-roah/roahos" class="web-link">Github</a></p>
     </div>
 
-    <div class="content-card">
-        <h1>Hyprland     
-            <div class="screenshot-button" id="openViewer2">
-                <img src="gallery.svg">
-            </div> 
-            <dialog id="imageViewerDialog2">
-                <div class="image-viewer2">
-                    <button id="prev2" class="arrow">&lt;</button>
-                    <img id="image2" src="hyprland/startup.png" alt="Image Viewer2">
-                    <button id="next2" class="arrow">&gt;</button>
-                    <button id="closeViewer2" class="close-button">X</button>
-                </div>
-            </dialog>     
-        </h1>
-        <h6>Configurations for hyprland based on arch linux.</h6>
-        <p>
-            A hyprland, a wayland based tiling manager, configuration using hyprland, waybar, tofi, iwd, alacritty and bash scripts.
-        </p>
-        <p><strong style="padding-right:100px;">For more information:</strong><a href="https://github.com/rnr-roah/hyprland" class="web-link">Github</a></p>
-    </div>
-
-    <div class="content-card">
-        <h1>Wifi script       
-            <div class="screenshot-button" id="openViewer3">
-                <img src="gallery.svg">
-            </div> 
-            <dialog id="imageViewerDialog3">
-                <div class="image-viewer3">
-                    <img id="image3" src="wifi/script.png" alt="Image Viewer3">
-                    <button id="closeViewer3" class="close-button">X</button>
-                </div>
-            </dialog> 
-       </h1>
-        <h6>A interactice terminal tool for iwd.</h6>
-        <p>
-           A CLI/Terminal based app for iwd, default wifi tool in arch linux. It's a easier, faster and more reliable than traditional network manager. This script was originally written for <a href="index.html#roahos" style="color:rgb(49, 48, 48);">Roah OS</a> but can be used for any arch based system.
-        </p>
-        <p><strong style="padding-right:70px;">This and more bash scripting based programs:</strong><a href="https://github.com/rnr-roah/programs" class="web-link">Github</a></p>
-    </div>
-    
-    
-    
-    <div class="content-card" style="background-color: transparent; border: 1px solid transparent;">
-     <footer class="footer">
-            <p>&copy;2022 rnrroah@gmail.com</p>
-      </footer>
-    </div>
-    </div><!--Content-card-->
-    </div><!--Content-->
     <script src="flashcards.js"></script>
-    <script src="roahos.js"></script>
-    <!-- for the about me and project highlight selection -->
-    <script>
-        const navLinks = document.querySelectorAll('.nav-link[data-link]');
-        const sections = document.querySelectorAll('.intro');
-    
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                const id = entry.target.getAttribute('id');
-                const navLink = document.querySelector(`.nav-link[data-link="${id}"]`);
-                if (entry.isIntersecting) {
-                    navLinks.forEach(link => link.classList.remove('active-link'));
-                    if (navLink) navLink.classList.add('active-link');
-                }
-            });
-        }, {
-            threshold: 0.6 // triggers when 60% of the section is visible
-        });
-    
-        sections.forEach(section => observer.observe(section));
-    </script>
-    
+
 </body>
 </html>
 

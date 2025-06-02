@@ -3,6 +3,7 @@ body {
     /* background-color: #f4f4f4; */
     background-color: #1d1d1d;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -13,7 +14,7 @@ body {
     background-position: center;   /* centers the image */
     background-attachment: fixed;
     background-repeat: no-repeat;  /* prevents tiling */
-    overflow: hidden;
+    overflow: auto;
     scrollbar-width: none;     /* Firefox */
    -ms-overflow-style: none;  /* IE/Edge */
 
@@ -34,7 +35,7 @@ body::-webkit-scrollbar {
     text-align: center;
     width: 500px;
     height: 350px;
-    transition-duration: 0.5s;
+    animation: profile-card 0.5s ease-out forwards;
     overflow-y: auto;
     scrollbar-width: none;     /* Firefox */
    -ms-overflow-style: none;  /* IE/Edge */
@@ -43,9 +44,21 @@ body::-webkit-scrollbar {
 .profile-card::-webkit-scrollbar {
   display: none;             /* Chrome, Safari */
 }
+
+
+/* 
 .profile-card:hover {
     height: 90%;
+} */
+@keyframes profile-card {
+  from {
+    height: 350px;
+  }
+  to {
+    height: 90%;
+  }
 }
+
 .profile-img {
     border-radius: 50%;
     width: 150px;
@@ -87,7 +100,7 @@ p {
     font-size: 0.9em;
     color: #d8d2d2;
     padding-bottom: 5px;
-    border-bottom: 1px solid #555;
+    /* border-bottom: 1px solid #555; */
     transition-duration: 0.5s;
 }
 p:hover{
@@ -126,8 +139,11 @@ p:hover{
     color: rgb(178, 177, 177);
     border-radius: 5px;
     text-decoration: none;
-    position:relative;
-    transition-duration: 0.2s;
+    position:fixed;
+    transition-duration: 0.2s; 
+    bottom: 0;
+    left:50%;
+    transform: translateX(-50%);
 }
 
 .blog-link:hover {
@@ -207,6 +223,8 @@ p:hover{
 .flashcard1 {
     perspective: 1000px;
     margin: 0px auto;
+    /* position: fixed */
+    width: 500px;
 }
 
 .flashcard1-inner {
@@ -218,21 +236,22 @@ p:hover{
     position: relative;
     backface-visibility: hidden;
     border-radius: 5px;
+    transform: translate(-50%, -50%) scale(0.0001);
 }
 
 .flashcard1-back {
-    z-index: 1000;
     background-color: rgba(120, 118, 118, 0.155);
     backdrop-filter: blur();
     border: 1px solid rgba(175, 175, 175, 0);
     display: list-item;
     align-items: center;
+    text-align: center;
     justify-content: center;
     width: 500px;
     padding: 0px;
-    position: auto;
-    margin-top: -50%;
-    margin-right: 500px;
+    position: relative;
+    margin-top: -110%;
+    margin-right: 0;
     transform: rotateY(180deg);
     border-radius: 5px;
     backdrop-filter: blur(5px);
