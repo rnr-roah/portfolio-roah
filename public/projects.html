@@ -38,7 +38,7 @@
             text-align: center;
             width: 500px;
             height: 350px;
-            animation: profile-card 0.5s ease-out forwards;
+            animation: profile-card 0.8s ease-out forwards;
             overflow-y: auto;
             scrollbar-width: none;
             -ms-overflow-style: none;
@@ -58,10 +58,8 @@
         }
 
         .header-section {
-            margin-bottom: 30px;
+            margin-bottom: 0px;
             position: relative;
-            border-bottom: 1px solid #555;
-            padding-bottom: 20px;
         }
 
         h1 {
@@ -75,13 +73,15 @@
             padding: 20px;
             border-radius: 5px;
             background-color: #2c2c2c7d;
+            color: #ffffff72;
         }
 
         .subtitle {
-            color: #d8d2d2;
+            color: #efdaf5b2;
             font-size: 0.9em;
             margin: 10px 0;
             padding: 10px;
+            margin-left: 20px;
             transition-duration: 0.5s;
             text-align: justify;
         }
@@ -101,13 +101,13 @@
         .project-card {
             background-color: #1b1b1b71;
             border-radius: 5px;
-            padding: 20px;
-            margin: 10px;
+            padding: 30px;
             color: aliceblue;
             transition: all 0.5s ease;
             cursor: pointer;
             position: relative;
             overflow: hidden;
+            margin: 10px;
         }
 
         .project-card:hover {
@@ -193,17 +193,17 @@
 
         .status-complete {
             background-color: #1b1b1b71;
-            color: #00ff00;
+            color: #00ff0083;
         }
 
         .status-progress {
             background-color: #1b1b1b71;
-            color: #ffa500;
+            color: #ffa60085;
         }
 
         .status-planned {
             background-color: #1b1b1b71;
-            color: #ffff00;
+            color: #ffff0085;
         }
 
         /* Flashcard Menu Styles */
@@ -236,7 +236,7 @@
             width: 500px;
             padding: 20px;
             /* Removed margin-right and added margin: auto for horizontal centering */
-            margin-left: -20px;
+            margin-left: -15px;
             margin-right: 20px;
             transform: rotateY(180deg);
             border-radius: 5px;
@@ -252,7 +252,7 @@
             border: 1px solid #c0bdbd00;
             border-radius: 5px;
             padding: 40px 0px;
-            margin: 10px;
+            margin: 5px;
             margin-bottom: 20px;
             color: aliceblue;
             transition-duration: 0.5s;
@@ -301,13 +301,14 @@
         .blog-link {
             background-color: #1b1b1b71;
             border-radius: 5px;
-            padding: 10px 205px;
+            padding: 10px 230px;
             margin: 5px;
-            margin-bottom: 20px;
+            margin-bottom: 100px;
             color: aliceblue;
             transition-duration: 0.5s;
             margin-right: 0px;
             cursor: pointer;
+            position: relative;
         }
 
         .blog-link:hover {
@@ -348,17 +349,16 @@
 </head>
 <body>
     <div class="profile-card">
-        <!-- Know More Menu -->
         <div class="flashcard1">
             <div class="flashcard1-inner">
                 <div class="flashcard1-back">
+                    <a href="index.html" class="nav-link2">
+                        <div class="tile">Home
+                        </div>
+                    </a>
                     <a href="aboutme.html" class="nav-link2">
                         <div class="tile">
                             About Me
-                        </div>
-                    </a>
-                    <a href="index.html" class="nav-link2">
-                        <div class="tile">Home
                         </div>
                     </a>
                     <a href="blog.html" class="nav-link2">
@@ -370,17 +370,18 @@
                     </div>
                 </div>
                 <div class="flashcard1-front">
-                    <a href="#" class="blog-link">Menu</a>
+                    <adiv class="blog-link">Menu</div>
                 </div>
             </div>
-        </div>
         <div class="header-section">
-            <h1>projects</h1>
-            
+            <h1>projects</h1>   
         </div>
         <p class="subtitle">A collection of software projects I've worked on</p>
         <div class="projects-grid">
             <!-- Project 1: RoahOS -->
+             <!-- Know More Menu -->
+        
+        </div>
             <div class="project-card">
                 <div class="project-status status-complete">Complete</div>
                 <div class="project-header">
